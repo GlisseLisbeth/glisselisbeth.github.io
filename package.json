@@ -12,7 +12,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "precommit": "NODE_ENV=production lint-staged",
+    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,11 +31,25 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run pretest"
+    }
+ },
+ "lint-staged": {
+  "*.js": ["./node_modules/.bin/eslint — fix", "git add"]
+},
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0"
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
   }
 }
