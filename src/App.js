@@ -7,6 +7,7 @@ import Portfolio from './components/portfolio/portfolio';
 import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
 import data from './data';
+
 import './App.css';
 
 class App extends Component {

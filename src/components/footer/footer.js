@@ -34,17 +34,17 @@ class Footer extends Component {
                     © Copyright <a href="https://www.glisse.co">Dev Glisse</a>
                   </span>
                   <span>
-                    Template by{' '}
+                    Template de{' '}
                     <a href="https://www.styleshout.com/templates/preview/Infinity10/">
                       Infinity10
                     </a>
                   </span>
                   <span>
-                    Design by{' '}
+                    Design de{' '}
                     <a href="http://www.styleshout.com/">styleshout</a>
                   </span>
                   <span>
-                    Hecho by <a href="https://reactjs.org">reactJS</a>
+                    Hecho en <a href="https://reactjs.org">reactJS</a>
                   </span>
                 </div>
               </div>

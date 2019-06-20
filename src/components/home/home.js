@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import $ from 'jquery';
 
 import './home.css';
 
@@ -8,9 +9,28 @@ class Home extends Component {
     this.state = {
       isLoading: true
     };
+    this.cfg = {
+      defAnimation: 'fadeInUp'
+    };
   }
 
   componentDidMount() {
+    if (!$('html').hasClass('no-cssanimations')) {
+      setTimeout(() => {
+        $('.animate-intro').each(ctr => {
+          const el = $(this);
+          let animationEfx = el.data('animate') || null;
+
+          if (!animationEfx) {
+            animationEfx = this.cfg.defAnimation;
+          }
+
+          setTimeout(() => {
+            el.addClass(`${animationEfx} animated`);
+          }, ctr * 300);
+        });
+      }, 100);
+    }
     this.setState({ isLoading: false });
   }
 

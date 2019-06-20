@@ -1,9 +1,45 @@
 import React, { Component, Fragment } from 'react';
+import axios from 'axios';
+
 import './contact.css';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fName: '',
+      fEmail: '',
+      fSubject: '',
+      fMessage: '',
+      mailSent: false,
+      error: null
+    };
+  }
+
+  handleFormSubmit = e => {
+    e.preventDefault();
+    axios({
+      method: 'post',
+      url: `${process.env.REACT_APP_API}`,
+      headers: { 'content-type': 'application/json' },
+      data: this.state
+    })
+      .then(result => {
+        if (result.data.sent) {
+          this.setState({
+            mailSent: result.data.sent
+          });
+          this.setState({ error: false });
+        } else {
+          this.setState({ error: true });
+        }
+      })
+      .catch(error => this.setState({ error: error.message }));
+  };
+
   render() {
     const { data } = this.props;
+    const { fName, fEmail, fSubject, fMessage, mailSent, error } = this.state;
     return (
       <Fragment>
         <section id="contact">
@@ -19,14 +55,15 @@ class Contact extends Component {
             <div className="col-seven tab-full animate-this">
               <h5>Envíame un mensaje</h5>
 
-              <form name="contactForm" id="contactForm" method="post">
+              <form action="#" name="contactForm" id="contactForm">
                 <div className="form-field">
                   <input
                     name="contactName"
                     type="text"
-                    id="contactName"
+                    id="fName"
                     placeholder="Su nombre"
-                    value=""
+                    value={fName}
+                    onChange={e => this.setState({ fName: e.target.value })}
                     minLength="2"
                     required=""
                   />
@@ -37,9 +74,12 @@ class Contact extends Component {
                       <input
                         name="contactEmail"
                         type="email"
-                        id="contactEmail"
+                        id="fEmail"
                         placeholder="Su correo electrónico"
-                        value=""
+                        value={fEmail}
+                        onChange={e =>
+                          this.setState({ fEmail: e.target.value })
+                        }
                         required=""
                       />
                     </div>
@@ -49,9 +89,12 @@ class Contact extends Component {
                       <input
                         name="contactSubject"
                         type="text"
-                        id="contactSubject"
+                        id="fSubject"
                         placeholder="Asunto"
-                        value=""
+                        value={fSubject}
+                        onChange={e =>
+                          this.setState({ fSubject: e.target.value })
+                        }
                       />
                     </div>
                   </div>
@@ -59,19 +102,25 @@ class Contact extends Component {
                 <div className="form-field">
                   <textarea
                     name="contactMessage"
-                    id="contactMessage"
+                    id="fMessage"
                     placeholder="Mensaje"
                     rows="10"
                     cols="50"
+                    value={fMessage}
+                    onChange={e => this.setState({ fMessage: e.target.value })}
                     required=""
                   ></textarea>
                 </div>
                 <div className="form-field">
-                  <button className="submitform" type="button">
+                  <button
+                    className="submitform"
+                    type="button"
+                    onClick={e => this.handleFormSubmit(e)}
+                  >
                     Enviar
                   </button>
                   <div id="submit-loader">
-                    <div className="text-loader">Sending...</div>
+                    <div className="text-loader">Enviando...</div>
                     <div className="s-loader">
                       <div className="bounce1"></div>
                       <div className="bounce2"></div>
@@ -80,9 +129,13 @@ class Contact extends Component {
                   </div>
                 </div>
               </form>
-              <div id="message-warning"></div>
-              <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
+              <div>
+                {error && <div id="message-warning"></div>}
+                {mailSent && (
+                  <div id="message-success">
+                    <i className="fa fa-check"></i>Su mensaje a sido enviado, gracias!
+                  </div>
+                )}
               </div>
             </div>
 
