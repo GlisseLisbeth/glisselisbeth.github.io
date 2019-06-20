@@ -133,7 +133,8 @@ class Contact extends Component {
                 {error && <div id="message-warning"></div>}
                 {mailSent && (
                   <div id="message-success">
-                    <i className="fa fa-check"></i>Su mensaje a sido enviado, gracias!
+                    <i className="fa fa-check"></i>Su mensaje a sido enviado,
+                    gracias!
                   </div>
                 )}
               </div>
