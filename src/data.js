@@ -12,36 +12,41 @@ const data = {
       name: 'Bachiller en Ingeniería de Sistemas'
     }
   ],
+  study: [
+    {
+      name: 'Universidad San Cristóbal'
+    },
+    {
+      name: 'Laboratoria'
+    }
+  ],
   linkedinId: 'glisselisbeth',
   skypeid: 'glisse86',
   roleDescription: 'Apasionada por los códigos y la tecnología',
   socialLinks: [
     {
-      name: 'linkedin',
-      url: 'https://linkedin.com/in/glisselisbeth/',
-      className: 'fas fa-linkedin'
+      name: 'facebook',
+      url: 'https://www.facebook.com/glisselisbeth/',
+      className: 'fa fa-facebook-square'
     },
     {
       name: 'github',
       url: 'http://github.com/glisselisbeth',
-      className: 'fas fa-github'
+      className: 'fa fa-github-square'
     },
     {
-      name: 'twitter',
-      url: 'https://twitter.com/glisselisbeth',
-      className: 'fas fa-twitter'
-    },
-    {
-      name: 'dev',
-      url: 'https://dev.to/glisselisbeth',
-      className: 'fas fa-dev'
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in/glisselisbeth/',
+      className: 'fa fa-linkedin-square'
     }
   ],
   aboutme:
-    'Soy bachiller en Ingeniería de Sistemas, terminé en Laboratoria, la carrera de Frontend Developer; y en la Universidad San Cristóbal la carrera de Ingeniería de Sistemas.  Una de mis experiencias en el área de desarrollo web y de aplicaciones, es que con cada línea de código, me esfuerzo por hacer de la web y la aplicación un lugar hermoso y con la mejor experiencia del usuario. Trabajar con un equipo multidisciplinario y bajo los enfoques de metodologías ágiles. Siempre estuve interesada en las diferentes tecnologías y los códigos, y siempre activa en continuo aprendizaje',
+    'Una de mis experiencias en el área de desarrollo web y de aplicaciones, es que con cada línea de código, me esfuerzo por hacer de la web y la aplicación un lugar hermoso y con la mejor experiencia del usuario. Trabajar con un equipo multidisciplinario y bajo los enfoques de metodologías ágiles. Siempre estuve interesada en las diferentes tecnologías y los códigos.',
   address:
     'Mz. P4 Lote 16 Ampliación 1 12 de noviembre Pamplona Alta, San Juan de Miraflores',
   website: 'https://www.glisse.co',
+  email: 'glisselisbeth@gmail.com',
+  email2: 'glisselisbeth@outlook.com',
   education: [
     {
       UniversityName: 'Universidad Nacional San Cristóbal de Huamanga',
@@ -54,70 +59,123 @@ const data = {
       YearOfPassing: '2017'
     }
   ],
-  skillsDescription: 'Mis habilidades',
+  skillTitle: 'Mis habilidades',
+  skillDescription:
+    'Activamente en un continuo aprendizaje exponencial y la responsabilidad de hacerlo.',
   skills: [
     {
-      skillname: 'HTML5'
+      skillName: 'HTML5',
+      imgName: 'html5'
     },
     {
-      skillname: 'CSS'
+      skillName: 'CSS',
+      imgName: 'css3'
     },
     {
-      skillname: 'Javascript'
+      skillName: 'Javascript',
+      imgName: 'JS'
     },
     {
-      skillname: 'jQuery'
+      skillName: 'Firebase',
+      imgName: 'firebase'
     },
     {
-      skillname: 'DOM'
+      skillName: 'Bootstrap',
+      imgName: 'bootstrap'
     },
     {
-      skillname: 'Reactjs'
+      skillName: 'ReactJS',
+      imgName: 'react'
     },
     {
-      skillname: 'React Native'
+      skillName: 'React Native',
+      imgName: 'react-native'
     },
     {
-      skillname: 'AngularJS'
+      skillName: 'Typescript',
+      imgName: 'ts'
     },
     {
-      skillname: 'Angular'
+      skillName: 'Angular',
+      imgName: 'angular'
+    },
+    {
+      skillName: 'Git',
+      imgName: 'git'
+    },
+    {
+      skillName: 'Github',
+      imgName: 'github'
+    },
+    {
+      skillName: 'NodeJS',
+      imgName: 'node3'
     }
   ],
   portfolio: [
     {
-      name: 'Laboratoria News',
-      description:
-        'Caso implementado en equipo, con herramientas como gulp, sass, nodemon, express, firebase y API',
-      imgurl: 'images/portfolio/phone.jpg'
-    },
-    {
-      name: 'Task App',
-      description: 'Ejemplo implementado cor React y Typescript',
-      imgurl: 'images/portfolio/project.jpg'
-    },
-    {
-      name: 'Yape App',
-      description: 'Aplicación Node.js con Docker y express',
-      imgurl: 'images/portfolio/project.jpg'
-    },
-    {
-      name: 'Github User App',
-      description:
-        'Un cliente frontend de React que se comunica con la API Github GraphQL y el cliente Apollo.',
-      imgurl: 'images/portfolio/project.jpg'
-    },
-    {
-      name: 'Pokedex',
-      description:
-        'Sitio web utilizado Api Official Pokedex con Ajax, Nodejs y Express 5',
-      imgurl: 'images/portfolio/project.jpg'
-    },
-    {
-      name: 'Landing Sodimac Web',
+      num: '01',
+      ord: '#01',
+      title: 'Landing Sodimac',
       description:
         'Repositorio implementado en Altimea para el desarrollo de Sodimac de Alquiler de herramientas.',
-      imgurl: 'images/portfolio/project.jpg'
+      imgurl: 'images/portfolio/sodimac.png',
+      type: 'Web y Mobile',
+      link: 'https://laboratoria-news6.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+    },
+    {
+      num: '02',
+      ord: '#02',
+      title: 'Github User App',
+      description:
+        'Un cliente frontend de React que se comunica con la API Github GraphQL y el cliente Apollo.',
+      imgurl: 'images/portfolio/github-user_2.png',
+      type: 'Mobile',
+      link: 'https://laboratoria-news6.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+    },
+    {
+      num: '03',
+      ord: '#03',
+      title: 'Task App',
+      description: 'Ejemplo implementado cor React y Typescript',
+      imgurl: 'images/portfolio/note.png',
+      type: 'Mobile',
+      link: 'https://laboratoria-news6.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+    },
+    {
+      num: '04',
+      ord: '#04',
+      title: 'Laboratoria News',
+      description:
+        'Caso implementado en equipo, con herramientas como gulp, sass, nodemon, express, firebase y API',
+      imgurl: 'images/portfolio/laboratoria_news.png',
+      type: 'Web y Mobile',
+      link: 'https://laboratoria-news6.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+    },
+    {
+      num: '05',
+      ord: '#05',
+      title: 'Yape App',
+      description: 'Aplicación Node.js con Docker y express',
+      imgurl: 'images/portfolio/yape.png',
+      type: 'Mobile',
+      link: 'https://laboratoria-news6.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+    },
+    {
+      num: '06',
+      ord: '#06',
+      title: 'Pokedex',
+      description:
+        'Sitio web utilizado Api Official Pokedex con Ajax, Nodejs y Express 5',
+      imgurl: 'images/portfolio/pokedex.png',
+      type: 'Web y Mobile',
+      link: 'https://laboratoria-news6.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
     }
   ]
 };
