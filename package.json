@@ -2,7 +2,7 @@
   "name": "glisselisbeth.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://glisselisbeth.github.io/",
+  "homepage": "https://glisselisbeth.github.io",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
