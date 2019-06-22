@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import $ from 'jquery';
-
+import cv from '../../CV-GLISSELISBETH.pdf';
 import './home.css';
 
 class Home extends Component {
@@ -72,6 +72,16 @@ class Home extends Component {
                 <div className="more animate-intro">
                   <a className="smoothscroll button stroke" href="#about">
                     Acerca de mi
+                  </a>
+                  <a
+                    target="_blank"
+                    without="true"
+                    rel="noopener noreferrer"
+                    className="smoothscroll button stroke"
+                    href={cv}
+                    download
+                  >
+                    Mi CV
                   </a>
                 </div>
               </div>

@@ -2,7 +2,9 @@
   "name": "glisselisbeth.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://glisselisbeth.github.io/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "jquery": "^3.4.1",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.1.0",
@@ -24,7 +26,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js",
     "precommit": "NODE_ENV=production lint-staged",
-    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -69,8 +69,12 @@ class Portfolio extends Component {
                           <h4>{item.title}</h4>
                           <p>
                             {item.description}
-                            <br />
-                            <a href={item.link}>Demo</a>
+                            {item.production && (
+                              <Fragment>
+                                <br />
+                                <a href={item.link}>Demo</a>
+                              </Fragment>
+                            )}
                             <br />
                             <a href={item.code}>Codigo</a>
                           </p>

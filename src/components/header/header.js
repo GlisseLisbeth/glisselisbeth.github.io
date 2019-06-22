@@ -68,7 +68,7 @@ class Header extends Component {
             <ul className="nav-list">
               <li className="current">
                 <a className="smoothscroll" href="#home" title="">
-                  Home
+                  Portada
                 </a>
               </li>
               <li>

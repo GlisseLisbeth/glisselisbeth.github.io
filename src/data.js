@@ -121,8 +121,9 @@ const data = {
         'Repositorio implementado en Altimea para el desarrollo de Sodimac de Alquiler de herramientas.',
       imgurl: 'images/portfolio/sodimac.png',
       type: 'Web y Mobile',
-      link: 'https://laboratoria-news6.herokuapp.com/',
-      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+      link: 'https://github.com/GlisseLisbeth/landing_sodimac_web',
+      code: 'https://github.com/GlisseLisbeth/landing_sodimac_web',
+      production: false
     },
     {
       num: '02',
@@ -132,8 +133,9 @@ const data = {
         'Un cliente frontend de React que se comunica con la API Github GraphQL y el cliente Apollo.',
       imgurl: 'images/portfolio/github-user_2.png',
       type: 'Mobile',
-      link: 'https://laboratoria-news6.herokuapp.com/',
-      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+      link: 'https://github.com/GlisseLisbeth/react-graphql-apollo',
+      code: 'https://github.com/GlisseLisbeth/react-graphql-apollo',
+      production: false
     },
     {
       num: '03',
@@ -142,8 +144,9 @@ const data = {
       description: 'Ejemplo implementado cor React y Typescript',
       imgurl: 'images/portfolio/note.png',
       type: 'Mobile',
-      link: 'https://laboratoria-news6.herokuapp.com/',
-      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+      link: 'https://glisselisbeth.github.io/react-typescript/',
+      code: 'https://github.com/GlisseLisbeth/react-typescript',
+      production: true
     },
     {
       num: '04',
@@ -154,7 +157,8 @@ const data = {
       imgurl: 'images/portfolio/laboratoria_news.png',
       type: 'Web y Mobile',
       link: 'https://laboratoria-news6.herokuapp.com/',
-      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+      code: 'https://github.com/GlisseLisbeth/Laboratoria-news-codereview',
+      production: true
     },
     {
       num: '05',
@@ -163,8 +167,9 @@ const data = {
       description: 'Aplicación Node.js con Docker y express',
       imgurl: 'images/portfolio/yape.png',
       type: 'Mobile',
-      link: 'https://laboratoria-news6.herokuapp.com/',
-      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+      link: 'https://stormy-plains-32030.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/yape-app-docker/',
+      production: true
     },
     {
       num: '06',
@@ -174,8 +179,9 @@ const data = {
         'Sitio web utilizado Api Official Pokedex con Ajax, Nodejs y Express 5',
       imgurl: 'images/portfolio/pokedex.png',
       type: 'Web y Mobile',
-      link: 'https://laboratoria-news6.herokuapp.com/',
-      code: 'https://github.com/GlisseLisbeth/yape-app-docker'
+      link: 'https://pokedex-v2.herokuapp.com/',
+      code: 'https://github.com/GlisseLisbeth/pokedex-v2',
+      production: true
     }
   ]
 };
