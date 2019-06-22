@@ -4,7 +4,6 @@ import Home from './components/home/home';
 import About from './components/about/about';
 import Skill from './components/skill/skill';
 import Portfolio from './components/portfolio/portfolio';
-import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
 import data from './data';
 
@@ -19,7 +18,6 @@ class App extends Component {
         <About data={data} />
         <Skill data={data} />
         <Portfolio data={data} />
-        <Contact data={data} />
         <Footer />
       </Fragment>
     );

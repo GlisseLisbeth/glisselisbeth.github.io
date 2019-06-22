@@ -35,7 +35,7 @@ class Footer extends Component {
                   </span>
                   <span>
                     Template de{' '}
-                    <a href="https://www.styleshout.com/templates/preview/Infinity10/">
+                    <a href="https://www.styleshout.com/infinity-clean-modern-template-for-creatives-and-agencies/">
                       Infinity10
                     </a>
                   </span>
