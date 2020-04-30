@@ -5,7 +5,7 @@
   "homepage": "https://glisselisbeth.github.io",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.1.0",
     "lg-hash": "^1.0.4",
